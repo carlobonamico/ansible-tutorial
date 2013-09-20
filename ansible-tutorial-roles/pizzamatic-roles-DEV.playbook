@@ -1,0 +1,19 @@
+---
+- hosts: pizzamatic
+  gather_facts: no
+  sudo: yes
+  user: manager
+
+  roles:
+    - common
+    - postgres
+    - jdk7
+    - tomcat
+    - apache
+
+  tasks:
+   - debug: "Generic task for {{service.user}}"
+     #connection: local
+
+     
+     

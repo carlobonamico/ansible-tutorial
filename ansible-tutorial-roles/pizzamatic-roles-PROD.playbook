@@ -1,0 +1,38 @@
+---
+- hosts: pizzamatic-prod
+  sudo: yes
+  user: manager
+
+  roles:
+    - common
+
+  tasks:
+   - debug: "Common configuration for all nodes"
+
+
+- hosts: pizzamatic-dbs-prod
+  sudo: yes
+  user: manager
+
+  roles:
+    - postgres
+
+
+- hosts: pizzamatic-appservers-prod
+  sudo: yes
+  user: manager
+
+  roles:
+    - jdk7
+    - tomcat
+
+
+- hosts: pizzamatic-fe-prod
+  sudo: yes
+  user: manager
+
+  roles:
+    - common
+    - apache
+
+     

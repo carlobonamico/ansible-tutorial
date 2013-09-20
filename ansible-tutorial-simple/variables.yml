@@ -4,32 +4,28 @@
    user: '{{remote_user}}'
    host: '{{remote_host}}'
    service:
-      user: politecmed
-      name: politecmed
-      externalUrl: milodemo.prova.com
+      user: pizzamatic
+      name: pizzamatic
+      externalUrl: pizzamatic.com
    
    remote_key_rsa: /home/${user}/.ssh/${user}_rsa
    remote_key_rsa_pub: /home/${user}/.ssh/${user}_rsa.pub
-   
-   remote_key_service_rsa: /home/${service.user}/.ssh/${service.user}_rsa
-   remote_key_service_rsa_pub: /home/${service.user}/.ssh/${service.user}_rsa.pub
    
    local_key_folder: ./keys/servers
    
    cookie: "Cookie: gpw_e24=a" #to programmatically accept download license question
    jdk_dl_url: http://download.oracle.com/otn-pub/java/jdk/7u40-b43/jdk-7u40-linux-x64.tar.gz
    
-   
-   data_directory: /home/politecmed/postgresql
-   db_user: alfresco
-   db_pwd: alfresco
-   db_name: alfresco
+   data_directory: /home/pizzamatic/postgresql
+   db_user: pizzamatic
+   db_pwd: pizzamatic
+   db_name: pizzamatic
    db_login_pwd: master
    
    
    tomcat-version: 7.0.42
    shutdown-port: 8105  #Default 8005
-   standard-port: 8180  #Default 8080
+   standard-port: 8080  #Default 8080
    redirect-port: 8543  #Default 8443
    ajp-port: 8109       #Default 8009
    

@@ -1,0 +1,11 @@
+---
+- hosts: pizzamatic-simple
+  user: manager
+  sudo: yes
+
+  tasks:
+  - name: apache must be present
+    apt: pkg=apache2
+  
+  - name: apache must be running
+    service: name=apache2 state=started
